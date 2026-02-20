@@ -1,0 +1,31 @@
+name: Q7 Caching Primes
+
+on:
+  push:
+    paths:
+      - "GA_2/q7/**"
+      - ".github/workflows/q7-cache.yml"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Cache Primes
+      id: cache-primes
+      uses: actions/cache@v4
+      with:
+        path: GA_2/q7/prime-numbers
+        key: cache-c286803
+
+    - name: Generate Prime Numbers
+      if: steps.cache-primes.outputs.cache-hit != 'true'
+      run: |
+        mkdir -p GA_2/q7/prime-numbers
+        echo "2, 3, 5, 7, 11, 13, 17, 19, 23, 29" > GA_2/q7/prime-numbers/primes.txt
+
+    - name: prime-cache-c286803
+      run: echo "Cache hit ${{ steps.cache-primes.outputs.cache-hit }}"
