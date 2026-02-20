@@ -199,8 +199,8 @@
   ],
   "aggregations": {
   "clothing": {
-    "count": 6,
-    "inventoryValue": 137104.99
+    "count": 7,
+    "inventoryValue": 123118.34999999999
   },
   "home": {
     "count": 8,
