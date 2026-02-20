@@ -60,4 +60,4 @@ Folder: / (root)
   `?v=1`
 
 Example:
-
+https://amanvx.github.io/iitm-tds-26t1/GA_2/q5/products.json?v=1
