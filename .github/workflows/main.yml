@@ -1,0 +1,16 @@
+name: GA_2_Q6_Action
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  q6_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 24f2008471@ds.study.iitm.ac.in
+        run: echo "This is GA_2 Q6 action"
+
+      - name: Confirmation Step
+        run: echo "GitHub Action executed successfully!"
