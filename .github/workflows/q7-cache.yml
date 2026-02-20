@@ -1,4 +1,4 @@
-name: GA_2_Q7_Cache
+name: Caching Primes
 
 on: [push, workflow_dispatch]
 
