@@ -14,7 +14,7 @@ jobs:
       uses: actions/cache@v4
       with:
         path: prime-numbers
-        key: cache-d18a326
+        key: cache-c286803
 
     - name: Generate Prime Numbers
       if: steps.cache-primes.outputs.cache-hit != 'true'
@@ -22,5 +22,5 @@ jobs:
         mkdir -p prime-numbers
         echo "2, 3, 5, 7, 11, 13, 17, 19, 23, 29" > prime-numbers/primes.txt
 
-    - name: prime-cache-d18a326
+    - name: prime-cache-c286803
       run: echo "Cache hit ${{ steps.cache-primes.outputs.cache-hit }}"
